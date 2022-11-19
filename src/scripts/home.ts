@@ -1,4 +1,4 @@
-export const app = () => {
+export const home = () => {
     console.log('App');
     console.dir(document);
     const today = new Date();
@@ -60,7 +60,7 @@ export const app = () => {
         const output = document.querySelector(
             'nav output'
         ) as HTMLOutputElement;
-        if (element.value.length === 3) {
+        if (element.value.length > 3) {
             output.value = `Buscando ${element.value}`;
         }
     };
@@ -68,3 +68,5 @@ export const app = () => {
     const search = document.querySelector('nav input') as HTMLInputElement;
     search.addEventListener('input', inputHandler);
 };
+
+// 12:15

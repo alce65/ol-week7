@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning DOM</title>
+    <title>Home | Learning DOM</title>
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="./scripts/index.js" type="module"></script>
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Learning DOM</h1>
-    </header>
+
+    <slot name="header"></slot>
+
     <section>
         <p class="saludo">Saludos</p>
         <button data-value="1">Haz Click - 1</button>
@@ -40,9 +36,9 @@
             <output></output>
         </div>
     </nav>
-    <footer>
-        <address>ISDI</address>
-    </footer>
+
+    <slot name="footer"></slot>
+
 </body>
 
 </html>

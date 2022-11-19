@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | Learning DOM</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./scripts/index.js" type="module"></script>
+</head>
+
+<body>
+    <slot name="header"></slot>
+
+    <section>
+        <form>
+            <div>
+                <label for="userName">Nombre</label>
+                <input type="text" name="userName" id="userName" placeholder="Dime tu nombre" required>
+            </div>
+            <div>
+                <label for="userAge">Edad</label>
+                <input type="number" name="userAge" id="userAge" placeholder="Dime tu edad" required>
+            </div>
+            <div>
+                <input type="checkbox" name="isOk" id="isOk">
+                <label for="isOk">He leído las condiciones....</label>
+            </div>
+            <div>
+                <label for="course">Curso</label>
+                <select name="course" id="course" required>
+                    <option value=""></option>
+                    <option value="A">Angular</option>
+                    <option value="R">React</option>
+                    <option value="V">Vue</option>
+                </select>
+            </div>
+            <div>
+                <p>Elige turno</p>
+                <input type="radio" name="turn" id="t_m" value="M">
+                <label for="t_m">Mañana</label>
+                <input type="radio" name="turn" id="t_t" value="T">
+                <label for="t_t">Tarde</label>
+
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
+
+        </form>
+
+    </section>
+    <slot name="footer"></slot>
+</body>
+
+</html>
