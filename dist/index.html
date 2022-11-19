@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning DOM</title>
+    <script src="./scripts/index.js" type="module"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Learning DOM</h1>
+    </header>
+    <section>
+        <p class="saludo">Saludos</p>
+        <button data-value="1">Haz Click - 1</button>
+        <button data-value="2">Haz Click - 2</button>
+        <button data-value="3">Haz Click - 3</button>
+    </section>
+    <form>
+        <input type="text" placeholder="Dime tu nombre" required>
+        <input type="number" placeholder="Dime tu edad">
+        <button type="submit">Enviar</button>
+        <div>
+            <output></output>
+            <p id="p1" hidden>Encantados de tenerte aquí</p>
+            <p id="p2" class="hidden">Que grande eres</p>
+        </div>
+    </form>
+    <nav>
+        <input type="text" placeholder="Que quieres buscar">
+        <div>
+            <output></output>
+        </div>
+    </nav>
+    <footer>
+        <address>ISDI</address>
+    </footer>
+</body>
+
+</html>
