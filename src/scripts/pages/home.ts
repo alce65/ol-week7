@@ -1,6 +1,8 @@
+import { consoleDebug } from '../tools/debug.js';
+
 export const home = () => {
-    console.log('App');
-    console.dir(document);
+    consoleDebug('App');
+    consoleDebug(document, 'dir');
     const today = new Date();
 
     // Ejemplo del dinamismo del DOM
@@ -10,17 +12,19 @@ export const home = () => {
     // Leer información: seleccionando elementos
 
     const pGreetings = document.querySelector('.saludo');
-    console.dir(pGreetings);
+    consoleDebug(pGreetings);
 
     // Escribir información
-    if (!pGreetings) return;
+    if (!pGreetings) {
+        return;
+    }
     pGreetings.innerHTML += ` hoy, ${today.toLocaleString()}`;
 
     // Interaccionar con el usuario -> eventos
 
     const handleClic = (event: Event) => {
         const element = event.target as HTMLButtonElement;
-        console.log('click', element.dataset.value);
+        consoleDebug('click ' + element.dataset.value);
     };
 
     // Para un botón
@@ -68,5 +72,3 @@ export const home = () => {
     const search = document.querySelector('nav input') as HTMLInputElement;
     search.addEventListener('input', inputHandler);
 };
-
-// 12:15

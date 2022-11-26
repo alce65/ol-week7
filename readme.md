@@ -34,6 +34,13 @@ Formularios: data. Reset. Otros controles
 Inyección de HTML estáticos: Head / Header / Footer desde JS: constantes v. funciones. Location: enrutamiento
 
 ¿Testing en TS?
+
+```shell
+npm i -D @testing-library/dom @testing-library/jest-dom @testing-library/user-event jest-environment-jsdom
+```
+
+testEnvironment: 'jsdom',
+
 TS: Duck typing.
 DOM. IIFE para el evento DOMContentLoaded
 Repaso OOP. structuredClone(). Getters & setters.
